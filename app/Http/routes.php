@@ -58,11 +58,6 @@ Route::group(['prefix' => 'api', 'middleware' => 'auth:api'], function () {
     Route::get('user/profile/{id}','UserController@show');
     Route::put('user/profile/edit','UserController@edit');
     Route::get('user/trees','UserController@allplants');
-    Route::get('user/weightage',function(){
-      return Response::json([
-        "status" => 'success'
-      ]);
-    });
 
     // Plant related requests
     Route::post('plant/create','PlantController@create');
